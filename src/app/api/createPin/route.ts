@@ -3,7 +3,7 @@ import { connectMongoDB } from "@/lib/mongodb";
 import Pin from "@/models/Pin";
 import User from "@/models/User";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../auth/[...nextauth]/route";
+import { authOptions } from "../auth/[...nextauth]/options";
 
 export async function POST(req: NextRequest) {
   try {
