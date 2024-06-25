@@ -7,7 +7,7 @@ import { SearchContext } from "@/context/SearchContext";
 
 const HomePage = () => {
   const [pins, setPins] = useState([]);
-  const { searchResults, isSearching } = useContext(SearchContext);
+  const { searchResults } = useContext(SearchContext);
 
   useEffect(() => {
     const fetchPins = async () => {
@@ -26,11 +26,7 @@ const HomePage = () => {
 
   return (
     <section className="relative min-h-screen px-5 pt-20">
-      {isSearching ? (
-        <div className="text-center">Searching...</div>
-      ) : (
-        <ImageGrid pins={displayPins} />
-      )}
+      <ImageGrid pins={displayPins} />
     </section>
   );
 };
